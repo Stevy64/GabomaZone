@@ -1,6 +1,6 @@
 from django.db import models
 from categories.models import SubCategory, MainCategory, SuperCategory, MiniCategory
-from django.utils.translation import ugettext_lazy as _
+from django.utils.translation import gettext_lazy as _
 from django.utils.text import slugify
 from django.urls import reverse
 from .utils import code_generator, create_shortcode
@@ -21,7 +21,7 @@ try:
 except ImportError:
     from collections import Mapping
 
-from django.utils.translation import ugettext_lazy as _
+from django.utils.translation import gettext_lazy as _
 from django.utils.deconstruct import deconstructible
 from ckeditor.fields import RichTextField
 from accounts.models import Profile

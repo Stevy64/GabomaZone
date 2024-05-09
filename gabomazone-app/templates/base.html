@@ -11,7 +11,7 @@
         <meta http-equiv="x-ua-compatible" content="ie=edge" />
         <meta name="description" content="{{site_info.description}}" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-		<meta property="og:locale" content="en-us" />
+		<meta property="og:locale" content="fr-fr" />
         <meta property="og:title" content="{{site_info.site_title}}" />
 		<meta property="og:site_name" content="{{site_info.site_name}}" />
 		<meta property="og:description" content="{{site_info.description}}"/>
@@ -36,102 +36,9 @@
     </head>
 
     <body>
-{% comment %}
-<!-- Quick view -->
- <div class="modal fade custom-modal" id="quickViewModal" tabindex="-1" aria-labelledby="quickViewModalLabel" aria-hidden="true">
-	<div class="modal-dialog">
-		<div class="modal-content">
-			<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-			<div class="modal-body">
-				<div class="row">
-					<div class="col-md-6 col-sm-12 col-xs-12 mb-md-0 mb-sm-5">
-						<div class="detail-gallery">
-							<span class="zoom-icon"><i class="fi-rs-search"></i></span>
-							<!-- MAIN SLIDES -->
-							<div class="product-image-slider">
-								<figure class="border-radius-10">
-									<img src="{% static 'assets/imgs/shop/product-16-2.jpg'%}" alt="product image" />
-								</figure>
-								<figure class="border-radius-10">
-									<img src="{% static 'assets/imgs/shop/product-16-1.jpg'%}" alt="product image" />
-								</figure>
-								<figure class="border-radius-10">
-									<img src="{% static 'assets/imgs/shop/product-16-3.jpg'%}" alt="product image" />
-								</figure>
-								<figure class="border-radius-10">
-									<img src="{% static 'assets/imgs/shop/product-16-4.jpg'%}" alt="product image" />
-								</figure>
-								<figure class="border-radius-10">
-									<img src="{% static 'assets/imgs/shop/product-16-5.jpg'%}" alt="product image" />
-								</figure>
-								<figure class="border-radius-10">
-									<img src="{% static 'assets/imgs/shop/product-16-6.jpg'%}" alt="product image" />
-								</figure>
-								<figure class="border-radius-10">
-									<img src="{% static 'assets/imgs/shop/product-16-7.jpg'%}" alt="product image" />
-								</figure>
-							</div>
-							<!-- THUMBNAILS -->
-							<div class="slider-nav-thumbnails">
-								<div><img src="{% static 'assets/imgs/shop/thumbnail-3.jpg'%}" alt="product image" /></div>
-								<div><img src="{% static 'assets/imgs/shop/thumbnail-4.jpg'%}" alt="product image" /></div>
-								<div><img src="{% static 'assets/imgs/shop/thumbnail-5.jpg'%}" alt="product image" /></div>
-								<div><img src="{% static 'assets/imgs/shop/thumbnail-6.jpg'%}" alt="product image" /></div>
-								<div><img src="{% static 'assets/imgs/shop/thumbnail-7.jpg'%}" alt="product image" /></div>
-								<div><img src="{% static 'assets/imgs/shop/thumbnail-8.jpg'%}" alt="product image" /></div>
-								<div><img src="{% static 'assets/imgs/shop/thumbnail-9.jpg'%}" alt="product image" /></div>
-							</div>
-						</div>
-						<!-- End Gallery -->
-					</div>
-					<div class="col-md-6 col-sm-12 col-xs-12">
-						<div class="detail-info pr-30 pl-30">
-							<span class="stock-status out-stock"> Sale Off </span>
-							<h3 class="title-detail"><a href="shop-product-right.html" class="text-heading">Seeds of Change Organic Quinoa, Brown</a></h3>
-							<div class="product-detail-rating">
-								<div class="product-rate-cover text-end">
-									<div class="product-rate d-inline-block">
-										<div class="product-rating" style="width: 90%"></div>
-									</div>
-									<span class="font-small ml-5 text-muted"> (32 reviews)</span>
-								</div>
-							</div>
-							<div class="clearfix product-price-cover">
-								<div class="product-price primary-color float-left">
-									<span class="current-price text-brand">$38</span>
-									<span>
-										<span class="save-price font-md color3 ml-15">26% Off</span>
-										<span class="old-price font-md ml-15">$52</span>
-									</span>
-								</div>
-							</div>
-							<div class="detail-extralink mb-30">
-								<div class="detail-qty border radius">
-									<a href="#" class="qty-down"><i class="fi-rs-angle-small-down"></i></a>
-									<span class="qty-val">1</span>
-									<a href="#" class="qty-up"><i class="fi-rs-angle-small-up"></i></a>
-								</div>
-								<div class="product-extra-link2">
-									<button type="submit" class="button button-add-to-cart"><i class="fi-rs-shopping-cart"></i>Add to cart</button>
-								</div>
-							</div>
-							<div class="font-xs">
-								<ul>
-									<li class="mb-5">Vendor: <span class="text-brand">Nest</span></li>
-									<li class="mb-5">MFG:<span class="text-brand"> Jun 4.2021</span></li>
-								</ul>
-							</div>
-						</div>
-						<!-- Detail Info -->
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-</div>
-{% endcomment %}
 
-<header class="header-area header-style-1 header-style-5 header-height-2">
+	<!-- 1er Niveau de Banniere : About Us / My Account / Publicite 25% de discount / Devises -->
+	<header class="header-area header-style-1 header-style-5 header-height-2">
 	<div class="mobile-promotion">
 		{% for text_ad in head_text%}
 		<span>{{text_ad.ad_title}} <a class="active d-inline-block" style="color:#090101;" href="{{text_ad.ad_URL}}">Shop now</a></span>
@@ -168,43 +75,10 @@
 						 </div>
 					</div>
 				</div>
+				<!-- Changer la Dévise -->
 				<div class="col-xl-3 col-lg-4">
 					<div class="header-info header-info-right">
 						<ul>
-							{% comment %} <li>Need help? Call Us: <strong class="text-brand"> + 1800 900</strong></li> {% endcomment %}
-							{% comment %}
-							<li>
-								<a class="language-dropdown-active" href="#">English <i class="fi-rs-angle-small-down"></i></a>
-								 <ul class="language-dropdown">
-									<li>
-										<a href="#"><img src="{% static 'assets/imgs/theme/flag-fr.png'%}" alt="" />Français</a>
-									</li>
-									<li>
-										<a href="#"><img src="{% static 'assets/imgs/theme/flag-dt.png'%}" alt="" />Deutsch</a>
-									</li>
-									<li>
-										<a href="#"><img src="{% static 'assets/imgs/theme/flag-ru.png'%}" alt="" />Pусский</a>
-									</li>
-								</ul> 
-							</li>
-							{% endcomment %}
-							<div id="google_translate_element2"></div>
-							{% comment %}
-							<li>
-								<a class="language-dropdown-active" href="#">USD <i class="fi-rs-angle-small-down"></i></a>
-								 <ul class="language-dropdown">
-									<li>
-										<a href="#"><img src="{% static 'assets/imgs/theme/flag-fr.png'%}" alt="" />INR</a>
-									</li>
-									<li>
-										<a href="#"><img src="{% static 'assets/imgs/theme/flag-dt.png'%}" alt="" />MBP</a>
-									</li>
-									<li>
-										<a href="#"><img src="{% static 'assets/imgs/theme/flag-ru.png'%}" alt="" />EU</a>
-									</li>
-								</ul> 
-							</li>
-							{% endcomment %}
 							<form action="{% url 'home:set-currency' %}" method="post" style="margin-right: 10px;">
 								{% csrf_token %}
 								
@@ -224,12 +98,17 @@
 			</div>
 		</div>
 	</div>
+	<!-- 2e Niveau de Banniere : Logo / Barre de Recherche / Chariot / Compte -->
 	<div class="header-middle header-middle-ptb-1 d-none d-lg-block">
 		<div class="container">
 			<div class="header-wrap">
+
+				<!-- Logo -->
 				<div class="logo logo-width-1">
 					<a href="{% url 'home:index' %}"><img src="{{site_info.site_logo.url}}" alt="{{site_info.site_name}}" /></a>
 				</div>
+
+				<!-- Barre de Recherche Articles / Categories -->
 				<div class="header-right">
 					<div class="search-style-2">
 						<form action="{% url 'products:product-search'%}" method="post">
@@ -240,61 +119,18 @@
 										<option>{{super.name}}</option>
 								{%endfor%}
 							</select>
-							<!-- <div class="form-group--icon position-relative">
-								<div id="cat-label" class="product-cat-label">All Categories</div>
-								<select name ="category-select" class="product-category-select category-search" id="category-search" name="categories[]">
-								<option >All Categories</option>								
-								{% for super in supercategory%}
-										<option>{{super.name}}</option>
-								{%endfor%}
-								</select>
-							</div> -->
 
-							<input type="text" name="search-product" placeholder="Search for items..." autocomplete="off" required/>
+							<input type="text" name="search-product" placeholder="Rechercher un article" autocomplete="off" required/>
 							<button type="submit"><i class="fi-rs-search"></i></button>
 						</form>
 					</div>
 					<div class="header-action-right">
 						<div class="header-action-2">
-							{% comment %}
-							<div class="search-location">
-								<form action="#">
-									<select class="select-active">
-										<option>Your Location</option>
-										<option>Alabama</option>
-										<option>Alaska</option>
-										<option>Arizona</option>
-										<option>Delaware</option>
-										<option>Florida</option>
-										<option>Georgia</option>
-										<option>Hawaii</option>
-										<option>Indiana</option>
-										<option>Maryland</option>
-										<option>Nevada</option>
-										<option>New Jersey</option>
-										<option>New Mexico</option>
-										<option>New York</option>
-									</select>
-								</form>
-							</div>
-							 <div class="header-action-icon-2">
-								<a href="shop-compare.html">
-									<img class="svgInject" alt="Nest" src="{% static 'assets/imgs/theme/icons/icon-compare.svg'%}" />
-									<span class="pro-count blue">3</span>
-								</a>
-								<a href="shop-compare.html"><span class="lable ml-0">Compare</span></a>
-							</div>
-							<div class="header-action-icon-2">
-								<a href="shop-wishlist.html">
-									<img class="svgInject" alt="Nest" src="{% static 'assets/imgs/theme/icons/icon-heart.svg'%}" />
-									<span class="pro-count blue">6</span>
-								</a>
-								<a href="shop-wishlist.html"><span class="lable">Wishlist</span></a>
-							</div> {% endcomment %}
 							
+							<!-- Chariot -->
 							<div class="header-action-icon-2">
 								<a class="mini-cart-icon" href="{% url 'orders:cart'%}">
-									<img alt="Nest" src="{% static 'assets/imgs/theme/icons/icon-cart.svg'%}" />
+									<img alt="Gabomazone" src="{% static 'assets/imgs/theme/icons/icon-cart.svg'%}" />
 									{% if cart_count%}
 									<span class="pro-count blue">{{cart_count}}</span>
 									{%else%}
@@ -336,9 +172,10 @@
 								{%endif%}								
 							</div>
 							
+							<!-- Compte de Connexion -->
 							<div class="header-action-icon-2">
 								<a href="{% url 'accounts:dashboard_customer' %}">
-									<img class="svgInject" alt="Nest" src="{% static 'assets/imgs/theme/icons/icon-user.svg'%}" />
+									<img class="svgInject" alt="Gabomazone" src="{% static 'assets/imgs/theme/icons/icon-user.svg'%}" />
 								</a>
 								<a href="{% url 'accounts:dashboard_customer' %}"><span class="lable ml-0">Account</span></a>
 								<div class="cart-dropdown-wrap cart-dropdown-hm2 account-dropdown">
@@ -374,6 +211,7 @@
 	</div>
 	{% block sticky_bar %}
 
+	<!-- 3e Niveau de Banniere : Menu dans banderole Verte : Categories en vogue / Accueil / Promos / Categories / Magasins / Blog / Contact -->
 	<div class="header-bottom header-bottom-bg-color sticky-bar">
 		<div class="container">
 			<div class="header-wrap header-space-between position-relative">
