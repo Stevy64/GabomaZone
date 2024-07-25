@@ -17,3 +17,9 @@ pip install -r requirements.txt
 # Launch server (in virtualenv)
 python3 manage.py runserver 8001
 
+# Docker
+1) Create a Dockerfile with minimal packages based from official Python image
+2) run cmd > ' docker build -t gabomazone-app . ' ## docker build -t <containername> . -f <mycustomdockerfile>.Dockerfile
+3) run cmd > ' docker run -it --rm --name my-running-gabomazone-app my-gabomazone-app '
+
+
